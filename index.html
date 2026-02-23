@@ -187,10 +187,7 @@
 
     .outline:hover{ background: rgba(255,255,255,0.20); text-decoration: none; }
 
-    .photo-wrap{
-      display:flex;
-      justify-content:center;
-    }
+    .photo-wrap{ display:flex; justify-content:center; }
 
     .photo {
       width: 270px;
@@ -256,10 +253,37 @@
     .tag.green{ background: rgba(16,185,129,0.10); color: #065f46; border-color: rgba(16,185,129,0.22);} 
     .tag.sun{ background: rgba(245,158,11,0.12); color: #92400e; border-color: rgba(245,158,11,0.22);} 
 
-    footer {
-      text-align: center;
-      padding: 44px 18px;
-      color: #6b7280;
+    /* Details / accordion styling */
+    details { border-radius: 16px; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display:none; }
+
+    .panel{
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      box-shadow: 0 8px 18px rgba(10,20,40,0.06);
+    }
+
+    .media{ margin-top: 10px; }
+    .media-box{
+      width: 100%;
+      border-radius: 16px;
+      border: 1px dashed rgba(15, 23, 42, 0.18);
+      background: rgba(255,255,255,0.65);
+      padding: 14px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .media img{
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      box-shadow: 0 10px 22px rgba(10,20,40,0.10);
+      display:block;
     }
 
     @media (max-width: 860px) {
@@ -277,10 +301,9 @@
       <div class="brand"><span class="brand-dot"></span> Sanaz Borhani</div>
       <div class="nav">
         <a href="#about">About</a>
-        <a href="#methods">Tools & Methods</a>
-        <a href="#case-studies">Case Studies</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -311,7 +334,7 @@
         </div>
 
         <p style="margin-top:14px; color: rgba(255,255,255,0.75); font-size: 13px;">
-          This portfolio highlights bridge hydraulics, floodplain mapping, and climate resilience work across MA, NY, NJ, CT, and PA.
+          Files needed in your repo root: <b>index.html</b>, <b>Profile.jpg</b>, and <b>floodmap.jpg</b>.
         </p>
       </div>
 
@@ -333,245 +356,51 @@
     </div>
   </section>
 
-  <!-- TOOLS & METHODS -->
-  <section class="container" id="methods">
-    <h2>Tools & Methods</h2>
-    <p class="muted" style="margin-top:-8px; margin-bottom:18px;">
-      (Placeholder — you can add details later.)
-    </p>
+  <!-- PROJECTS (Accordion) -->
 
-    <div class="grid">
-      <div class="card">
-        <h3>Hydrology</h3>
-        <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-          <li>USGS StreamStats / regional regression</li>
-          <li>NRCS methods (TR‑55), PondPack</li>
-          <li>Design storms, routing, stage‑storage</li>
-        </ul>
-        <span class="tag">Methods</span>
-      </div>
-
-      <div class="card">
-        <h3>Hydraulics</h3>
-        <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-          <li>HEC‑RAS 1D/2D; HEC‑RAS Mapper</li>
-          <li>SRH‑2D; SMS workflows</li>
-          <li>Tidal analysis (HEC‑25) where applicable</li>
-        </ul>
-        <span class="tag sun">Modeling</span>
-      </div>
-
-      <div class="card">
-        <h3>GIS + Data</h3>
-        <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-          <li>ArcGIS Pro / spatial analysis</li>
-          <li>Floodplain mapping & deliverable figures</li>
-          <li>QA/QC, documentation, reproducible workflows</li>
-        </ul>
-        <span class="tag green">GIS</span>
-      </div>
-
-      <div class="card">
-        <h3>Automation</h3>
-        <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-          <li>Python scripting for watershed parameters</li>
-          <li>Curve Number mapping & lookups</li>
-          <li>Data analysis & visualization</li>
-        </ul>
-        <span class="tag">Python</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECT CASE STUDIES -->
-  <section class="container" id="case-studies">
-    <h2>Project Case Studies</h2>
-    <p class="muted" style="margin-top:-8px; margin-bottom:18px;">
-      (Placeholder — add narratives, figures, and results later. Each card can link to a separate page in the future.)
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Mystic River Pedestrian Bridge (Everett, MA)</h3>
-        <p class="muted">Peak flow estimation, climate change considerations, and design support.</p>
-        <details style="margin-top:12px;">
-          <summary style="cursor:pointer; font-weight:800;">Add details later</summary>
-          <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-            <li><b>Problem:</b> …</li>
-            <li><b>Data:</b> …</li>
-            <li><b>Approach:</b> …</li>
-            <li><b>Results:</b> …</li>
-            <li><b>Impact:</b> …</li>
-          </ul>
-        </details>
-        <span class="tag sun">Climate</span>
-      </div>
-
-      <div class="card">
-        <h3>Newton–Weston Bridge Bundle (Boston, MA)</h3>
-        <p class="muted">HEC‑RAS + SRH‑2D modeling, scour analysis, and FEMA no‑rise compliance.</p>
-        <details style="margin-top:12px;">
-          <summary style="cursor:pointer; font-weight:800;">Add details later</summary>
-          <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-            <li><b>Problem:</b> …</li>
-            <li><b>Modeling:</b> …</li>
-            <li><b>Scour:</b> …</li>
-            <li><b>Deliverables:</b> …</li>
-          </ul>
-        </details>
-        <span class="tag">Scour</span>
-      </div>
-
-      <div class="card">
-        <h3>Green Brook Flood Risk Management (NJ)</h3>
-        <p class="muted">Permitting model updates, GIS floodplain mapping, and countermeasure design.</p>
-        <details style="margin-top:12px;">
-          <summary style="cursor:pointer; font-weight:800;">Add details later</summary>
-          <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-            <li><b>Problem:</b> …</li>
-            <li><b>HEC‑RAS updates:</b> …</li>
-            <li><b>GIS mapping:</b> …</li>
-            <li><b>Scour countermeasures:</b> …</li>
-          </ul>
-        </details>
-        <span class="tag green">Floodplain</span>
-      </div>
-
-      <div class="card">
-        <h3>Route 30 Bridge over Duck Thorofare (Atlantic City, NJ)</h3>
-        <p class="muted">Unsteady 2D hydraulics with tidal considerations and scour evaluation.</p>
-        <details style="margin-top:12px;">
-          <summary style="cursor:pointer; font-weight:800;">Add details later</summary>
-          <ul style="margin: 10px 0 0 18px; padding: 0; color: var(--muted);">
-            <li><b>Problem:</b> …</li>
-            <li><b>Tidal analysis:</b> …</li>
-            <li><b>2D modeling:</b> …</li>
-            <li><b>Scour results:</b> …</li>
-          </ul>
-        </details>
-        <span class="tag sun">Tidal</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="container" id="projects">
-    <h2>Projects</h2>
-    <p class="muted" style="margin-top:-8px; margin-bottom:18px;">
-      Click a category to expand the project list.
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <details open>
-          <summary style="cursor:pointer; font-weight:800; font-size:16px;">AECOM (2025–Present) — Bridge & Climate Resilience</summary>
-          <div style="margin-top:12px; color: var(--muted);">
-            <ul style="margin: 10px 0 0 18px; padding: 0;">
-              <li><b>H&amp;H Report Reviews — AMTRAK Culverts (CT)</b>: Reviewed H&amp;H reports for multiple culverts (Enfield, Hartford, Windsor Locks).</li>
-              <li><b>Onondaga Creek (Syracuse, NY)</b>: Preliminary hydraulics + scour analysis to support design-build proposal for replacing five structures.</li>
-              <li><b>Mystic River Pedestrian Bridge (Everett, MA)</b>: Peak flow estimation using Massachusetts streamflow regression equations; climate change analysis for future sea level rise.</li>
-              <li><b>Route 20 over Connecticut River (Springfield, MA)</b>: 2D steady-state SRH‑2D hydrodynamic modeling to produce velocities and water levels for scour calculations.</li>
-              <li><b>Cranes Hollow Rd Bridge over Evans Kill (Amsterdam, NY)</b>: Hydrology via USGS StreamStats + 1D HEC‑RAS hydraulic modeling.</li>
-              <li><b>Wagners Hollow Rd Bridge over Caroga Creek (Palatine, NY)</b>: Hydrology via USGS StreamStats + 1D HEC‑RAS hydraulic modeling.</li>
-              <li><b>Kensico Reservoir Drainage Basin (Westchester, NY)</b>: Analyzed observed concentration data and developed methodology for PFAS loading.</li>
-            </ul>
-          </div>
-        </details>
-        <span class="tag">DOT / Rail</span>
-      </div>
-
-      <div class="card">
-        <details>
-          <summary style="cursor:pointer; font-weight:800; font-size:16px;">Jacobs (2022–2025) — Flood Risk, FEMA, Bridge Scour</summary>
-          <div style="margin-top:12px; color: var(--muted);">
-            <ul style="margin: 10px 0 0 18px; padding: 0;">
-              <li><b>Green Brook Flood Risk Management (NJ)</b>: Revised permitting HEC‑RAS model; created floodplain maps in ArcGIS; scour analysis + ACB countermeasures for Route 28 bridge.</li>
-              <li><b>Hamilton Rd Bridge over Conrail/CSX (NJ)</b>: Hydrology using NRCS TR‑55; HEC‑RAS 6.3 steady-state model for flood elevation impacts.</li>
-              <li><b>HEC‑RAS 2D Rain‑on‑Grid (Climate Change)</b>: Evaluated historical (1999, 2020) and projected (2100) rainfall events for floodplain assessment.</li>
-              <li><b>Route 23 Bridge over Mill Brook (NJ)</b>: PondPack NRCS methodology for peak flows (current + 2100); 1D HEC‑RAS + SRH‑2D for split flow conditions.</li>
-              <li><b>Newton–Weston Bridge Bundle (Boston, MA)</b>: 1D steady HEC‑RAS + unsteady SRH‑2D; scour analysis per MassDOT LRFD Bridge Manual; FEMA no‑rise analysis.</li>
-              <li><b>Route 27 Culvert over Northern Tributary to Ten Mile Run (NJ)</b>: 1D HEC‑RAS split-flow modeling; PondPack NRCS peak flow (current + 2100).</li>
-              <li><b>Route 30 Bridge over Duck Thorofare (Atlantic City, NJ)</b>: Unsteady 2D modeling in SMS/SRH‑2D; tidal hydrology/scour (HEC‑25); scour per HEC‑18/25.</li>
-              <li><b>Route 88 Bridge over Beaver Dam Creek (NJ)</b>: Hydrology (NRCS, ArcGIS, PondPack) + HEC‑RAS Mapper; stage-storage routing; detailed fluvial + tidal scour (HEC‑18/20/23/25).</li>
-              <li><b>Route 94 Bridge over Jacksonburg Creek (NJ)</b>: HEC‑RAS models for existing/temporary/proposed; scour per HEC‑18/20/23; NJDEP FHACAR/SWM regs; alternatives & downstream impact checks.</li>
-              <li><b>SR 0012 Crossing over Bernhart Creek (PA)</b>: Updated hydrology and selected TR‑55 method based on watershed characteristics.</li>
-              <li><b>Tremley Point Connector Rd over Rahway River (NJ)</b>: SRH‑2D floodplain model using fluvial peak flows from unsteady HEC‑RAS; revised 1D steady HEC‑RAS for impacts.</li>
-            </ul>
-          </div>
-        </details>
-        <span class="tag sun">Flood Risk</span>
-      </div>
-
-      <div class="card">
-        <details>
-          <summary style="cursor:pointer; font-weight:800; font-size:16px;">Research & Modeling (2013–2022) — Urban Flooding, Morphodynamics</summary>
-          <div style="margin-top:12px; color: var(--muted);">
-            <ul style="margin: 10px 0 0 18px; padding: 0;">
-              <li><b>Drexel (2021–2022)</b>: 2D flood modeling using PCSWMM for Camden, NJ; downscaled extreme precipitation in ultra-urban H&amp;H models (Cross‑RISA partnership).</li>
-              <li><b>Montalto &amp; Rothstein / eDesign Dynamics (2020–2022)</b>: 1D–2D PCSWMM + ArcGIS model for dredging impacts on Puerto Rico flood inundation maps; HEC‑RAS/HEC‑HMS/GeoHMS for San Juan Estuary building-site modeling.</li>
-              <li><b>Virginia Tech (2019–2020)</b>: Watershed delineation and stream stability/stormwater practice research; Python frequency analysis for effective discharge (Po River, Italy).</li>
-              <li><b>University of South Carolina (2013–2019)</b>: Flood hazards, levee breach and dam failure modeling; river morphology and sediment/scour modeling; hydrologic modeling and lab facility improvements.</li>
-            </ul>
-          </div>
-        </details>
-        <span class="tag green">Research</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="container" id="experience">
-    <h2>Experience (Highlights)</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>AECOM — Water Resources Engineer III</h3>
-        <p>
-          DOT/rail bridge hydraulics, hydrology (StreamStats/regression), 2D SRH‑2D modeling, scour, climate change analysis.
-        </p>
-        <span class="tag">2025–Present</span>
-      </div>
-      <div class="card">
-        <h3>Jacobs — Water Resources Engineer</h3>
-        <p>
-          Floodplain mapping, HEC‑RAS 1D/2D, SWMM, TR‑55/PondPack, FEMA no‑rise, tidal analysis and scour.
-        </p>
-        <span class="tag">2022–2025</span>
-      </div>
-      <div class="card">
-        <h3>Research + Teaching</h3>
-        <p>
-          Postdoc + research in flood hazards, river morphology, sediment/scour modeling; taught fluid mechanics and computational methods.
-        </p>
-        <span class="tag green">PhD + Postdoc</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="container" id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card"><b>Modeling</b><p>HEC‑RAS (1D/2D), SRH‑2D, HEC‑HMS, SWMM</p></div>
-      <div class="card"><b>GIS</b><p>ArcGIS Pro, ArcMap, ArcHydro, mapping & spatial analysis</p></div>
-      <div class="card"><b>Programming</b><p>Python, FORTRAN, MATLAB, data analysis & visualization</p></div>
-      <div class="card"><b>Technical</b><p>Bridge scour, floodplain analysis, hydrology methods</p></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="container" id="contact">
-    <div class="section">
-      <h2>Contact</h2>
-      <p class="muted" style="margin:0;">
-        Boston, MA<br>
-        <a href="mailto:s.borhani11@gmail.com">s.borhani11@gmail.com</a><br>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </p>
-    </div>
-  </section>
-
-  <footer>
     © 2026 Sanaz Borhani • Floodplain + climate resilience portfolio
   </footer>
+
+  <script>
+    // One-open-at-a-time accordion behavior.
+    // Works per "accordion container" (data-accordion) and per group name (data-acc-group).
+    (function () {
+      const accordionRoot = document.querySelector('[data-accordion]');
+      if (!accordionRoot) return;
+
+      accordionRoot.addEventListener('toggle', (event) => {
+        const d = event.target;
+        if (!(d instanceof HTMLDetailsElement)) return;
+        if (!d.open) return;
+
+        const group = d.getAttribute('data-acc-group');
+        if (!group) return;
+
+        // Find the closest container that shares the same group scope.
+        // We close siblings inside the nearest parent that contains other details of the same group.
+        const scope = d.parentElement;
+        if (!scope) return;
+
+        const siblings = scope.querySelectorAll(`:scope > details[data-acc-group="${group}"]`);
+        siblings.forEach((sib) => {
+          if (sib !== d) sib.open = false;
+        });
+      }, true);
+
+      // Also enforce one-open-at-a-time for nested groups where details are not direct children.
+      // For containers marked with data-acc-group, close any other open details within that container for the same group.
+      accordionRoot.querySelectorAll('[data-acc-group]').forEach((container) => {
+        container.addEventListener('toggle', (event) => {
+          const d = event.target;
+          if (!(d instanceof HTMLDetailsElement)) return;
+          if (!d.open) return;
+          const group = d.getAttribute('data-acc-group');
+          if (!group) return;
+          const openOnes = container.querySelectorAll(`details[data-acc-group="${group}"][open]`);
+          openOnes.forEach((x) => { if (x !== d) x.open = false; });
+        }, true);
+      });
+    })();
+  </script>
 </body>
 </html>
