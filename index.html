@@ -287,6 +287,15 @@
       font-size: 13px;
     }
 
+    /* ✅ Image styling (so your uploaded images look professional) */
+    .media img{
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      box-shadow: 0 10px 22px rgba(10,20,40,0.10);
+    }
+
     footer {
       text-align: center;
       padding: 44px 18px;
@@ -369,150 +378,57 @@
   <section class="container" id="projects" data-accordion>
     <h2>Projects</h2>
     <p class="muted" style="margin-top:-8px; margin-bottom:18px;">
-      Click a project to expand. Inside each project open <b>Description</b> (summary + image placeholder) and <b>Methods</b> (tools + workflow placeholder).
+      Click a project to expand. Inside each project open <b>Description</b> and <b>Methods</b>.
       Only one item stays open at a time.
     </p>
 
     <div class="grid">
-      <!-- AECOM -->
-      <div class="card">
-        <details data-group="employer" open>
-          <summary style="cursor:pointer; font-weight:900; font-size:16px;">AECOM (2025–Present) — Bridge & Climate Resilience</summary>
-
-          <div style="margin-top:14px;" data-scope>
-            <details data-group="project">
-              <summary style="cursor:pointer; font-weight:800;">Mystic River Pedestrian Bridge (Everett, MA)</summary>
-              <div class="panel" data-scope>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Description</summary>
-                  <div class="panel">
-                    <p><b>Brief:</b> Peak flow estimation using MA regression equations; considered climate drivers including future sea level rise.</p>
-                    <p class="muted"><b>Summary (add later):</b> …</p>
-                    <div class="media"><div class="media-box">Add image: <code>mystic-river.jpg</code></div></div>
-                  </div>
-                </details>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Methods</summary>
-                  <div class="panel">
-                    <p><b>Tools:</b> MA regression/StreamStats references, SLR scenarios, GIS mapping.</p>
-                    <div class="media"><div class="media-box">Add workflow infographic: <code>workflow-regression-slr.png</code></div></div>
-                  </div>
-                </details>
-              </div>
-            </details>
-
-            <details data-group="project">
-              <summary style="cursor:pointer; font-weight:800;">Route 20 over Connecticut River (Springfield, MA)</summary>
-              <div class="panel" data-scope>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Description</summary>
-                  <div class="panel">
-                    <p><b>Brief:</b> 2D steady SRH-2D model to develop velocity/WSEL fields for scour calculations.</p>
-                    <div class="media"><div class="media-box">Add image: <code>route20-ctriver.jpg</code></div></div>
-                  </div>
-                </details>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Methods</summary>
-                  <div class="panel">
-                    <p><b>Tools:</b> SRH-2D; terrain prep; boundaries; post-processing for scour inputs.</p>
-                    <div class="media"><div class="media-box">Add workflow infographic: <code>workflow-srh2d-scour.png</code></div></div>
-                  </div>
-                </details>
-              </div>
-            </details>
-
-            <!-- Add remaining AECOM projects here following the same pattern -->
-          </div>
-
-        </details>
-        <span class="tag">AECOM</span>
-      </div>
-
       <!-- JACOBS -->
       <div class="card">
-        <details data-group="employer">
+        <details data-group="employer" open>
           <summary style="cursor:pointer; font-weight:900; font-size:16px;">Jacobs (2022–2025) — Flood Risk, FEMA, Bridge Scour</summary>
 
           <div style="margin-top:14px;" data-scope>
-            <details data-group="project">
+            <!-- ✅ NEWTON–WESTON with real images -->
+            <details data-group="project" open>
               <summary style="cursor:pointer; font-weight:800;">Newton–Weston Bridge Bundle Design Build (Boston, MA)</summary>
               <div class="panel" data-scope>
+
                 <details data-group="tab">
                   <summary style="cursor:pointer; font-weight:800;">Description</summary>
                   <div class="panel">
                     <p><b>Brief:</b> HEC-RAS + SRH-2D modeling, scour analysis, and FEMA no-rise evaluation.</p>
                     <p class="muted"><b>Summary (add later):</b> …</p>
-                    <div class="media"><div class="media-box">Add image: <code>newton-weston.jpg</code></div></div>
+
+                    <!-- ✅ show your uploaded project image -->
+                    <div class="media">
+                      <img src="newton-weston.jpg" alt="Newton–Weston project image">
+                    </div>
                   </div>
                 </details>
+
                 <details data-group="tab">
                   <summary style="cursor:pointer; font-weight:800;">Methods</summary>
                   <div class="panel">
                     <p><b>Tools:</b> HEC-RAS (steady/unsteady), SRH-2D, FEMA no-rise workflow, scour procedures.</p>
-                    <div class="media"><img src="workflow-no-rise.png" alt="No-rise analysis workflow">
-                      <div style="height:10px"></div>
+
+                    <!-- ✅ show your uploaded workflow images -->
+                    <div class="media">
+                      <img src="workflow-no-rise.png" alt="FEMA no-rise analysis workflow">
+                      <div style="height:12px"></div>
                       <img src="workflow-climate-cci.png" alt="Climate change assessment workflow">
+                    </div>
                   </div>
                 </details>
+
               </div>
             </details>
 
-            <details data-group="project">
-              <summary style="cursor:pointer; font-weight:800;">Route 30 — Bridge over Duck Thorofare (Atlantic City, NJ)</summary>
-              <div class="panel" data-scope>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Description</summary>
-                  <div class="panel">
-                    <p><b>Brief:</b> Unsteady 2D hydraulics with tidal boundary conditions; evaluated WSEL/velocities and scour.</p>
-                    <div class="media"><div class="media-box">Add image: <code>duck-thorofare.jpg</code></div></div>
-                  </div>
-                </details>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Methods</summary>
-                  <div class="panel">
-                    <p><b>Tools:</b> SRH-2D/SMS; tidal/SLR scenarios; scour methods.</p>
-                    <div class="media"><div class="media-box">Add workflow infographic: <code>workflow-tidal-slr.png</code></div></div>
-                  </div>
-                </details>
-              </div>
-            </details>
-
-            <!-- Add remaining Jacobs projects here following the same pattern -->
+            <!-- Keep other Jacobs projects here as you add them -->
           </div>
 
         </details>
         <span class="tag sun">Jacobs</span>
-      </div>
-
-      <!-- RESEARCH -->
-      <div class="card">
-        <details data-group="employer">
-          <summary style="cursor:pointer; font-weight:900; font-size:16px;">Research & Modeling (2013–2022)</summary>
-
-          <div style="margin-top:14px;" data-scope>
-            <details data-group="project">
-              <summary style="cursor:pointer; font-weight:800;">PCSWMM 2D Flood Modeling — Camden, NJ (Drexel)</summary>
-              <div class="panel" data-scope>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Description</summary>
-                  <div class="panel">
-                    <p><b>Brief:</b> 2D flood modeling and downscaling extreme precipitation for ultra-urban H&H models.</p>
-                    <div class="media"><div class="media-box">Add image: <code>camden-pcswmm.jpg</code></div></div>
-                  </div>
-                </details>
-                <details data-group="tab">
-                  <summary style="cursor:pointer; font-weight:800;">Methods</summary>
-                  <div class="panel">
-                    <p><b>Tools:</b> PCSWMM; rainfall processing; QA/QC; mapping outputs.</p>
-                    <div class="media"><div class="media-box">Add workflow infographic: <code>workflow-pcswmm-2d.png</code></div></div>
-                  </div>
-                </details>
-              </div>
-            </details>
-          </div>
-
-        </details>
-        <span class="tag green">Research</span>
       </div>
     </div>
   </section>
@@ -581,7 +497,6 @@
         const group = d.getAttribute('data-group');
         if (!group) return;
 
-        // Find closest scope container (or root as fallback)
         const scope = d.closest('[data-scope]') || root;
 
         const openSameGroup = scope.querySelectorAll(`details[data-group="${group}"][open]`);
@@ -593,4 +508,3 @@
   </script>
 </body>
 </html>
-
