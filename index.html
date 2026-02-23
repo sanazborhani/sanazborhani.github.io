@@ -500,11 +500,12 @@
 <section class="container" id="methods" data-accordion>
   <h2>Tools & Methods</h2>
   <p class="muted" style="margin-top:-8px; margin-bottom:18px;">
-    Click a method to expand. (Infographics and decision tree are embedded from your repo.)
+    Click a method to expand and view workflows and decision tools.
   </p>
 
   <div class="grid">
-    <!-- No-Rise Analysis -->
+
+    <!-- ================= No-Rise Analysis ================= -->
     <div class="card">
       <details data-group="method">
         <summary style="cursor:pointer; font-weight:900; font-size:16px;">
@@ -512,19 +513,22 @@
         </summary>
 
         <div class="panel">
-          <p class="muted" style="margin-top:0;">
-            Workflow for running an existing vs. proposed model, comparing WSEL, and documenting no-rise compliance.
+          <p class="muted">
+            Workflow for running existing vs. proposed models, comparing WSEL, and documenting FEMA no-rise compliance.
           </p>
 
           <details data-group="method-sub">
             <summary style="cursor:pointer; font-weight:800;">Infographic</summary>
             <div class="panel">
-              <div class="media">
-                <img src="no-rise-workflow.png" alt="No-Rise Analysis Workflow Infographic">
+
+              <div class="infographic-viewer">
+                <img src="./no-rise-workflow.png" alt="No-Rise Analysis Workflow Infographic">
               </div>
-              <p class="muted" style="font-size:13px; margin-bottom:0;">
-                File used: <code>no-rise-workflow.png</code>
-              </p>
+
+              <div class="media-actions">
+                <a class="btn-link" href="./no-rise-workflow.png" target="_blank">Open full size</a>
+              </div>
+
             </div>
           </details>
         </div>
@@ -532,7 +536,7 @@
       <span class="tag">FEMA / HEC-RAS</span>
     </div>
 
-    <!-- CMIP5 Climate Data Processing -->
+    <!-- ================= CMIP5 Climate Processing ================= -->
     <div class="card">
       <details data-group="method">
         <summary style="cursor:pointer; font-weight:900; font-size:16px;">
@@ -540,19 +544,22 @@
         </summary>
 
         <div class="panel">
-          <p class="muted" style="margin-top:0;">
-            Processing/downscaling climate projections and translating results into rainfall/flow scenario inputs.
+          <p class="muted">
+            Processing and downscaling climate projections to develop rainfall and flow scenario inputs.
           </p>
 
           <details data-group="method-sub">
             <summary style="cursor:pointer; font-weight:800;">Infographic</summary>
             <div class="panel">
-              <div class="media">
-                <img src="cmip5-workflow.png" alt="CMIP5 climate data processing workflow infographic">
+
+              <div class="infographic-viewer">
+                <img src="./cmip5-workflow.png" alt="CMIP5 climate data processing workflow infographic">
               </div>
-              <p class="muted" style="font-size:13px; margin-bottom:0;">
-                File used: <code>cmip5-workflow.png</code>
-              </p>
+
+              <div class="media-actions">
+                <a class="btn-link" href="./cmip5-workflow.png" target="_blank">Open full size</a>
+              </div>
+
             </div>
           </details>
         </div>
@@ -560,7 +567,7 @@
       <span class="tag sun">Climate</span>
     </div>
 
-    <!-- Hydrology Method Selection Decision Tree -->
+    <!-- ================= Hydrology Method Selection ================= -->
     <div class="card">
       <details data-group="method">
         <summary style="cursor:pointer; font-weight:900; font-size:16px;">
@@ -568,42 +575,42 @@
         </summary>
 
         <div class="panel">
-          <p class="muted" style="margin-top:0;">
+          <p class="muted">
             Decision logic for choosing appropriate hydrologic methods based on watershed size, data availability,
-            urbanization, regulation, and study purpose.
+            regulation, and project purpose.
           </p>
 
           <details data-group="method-sub">
             <summary style="cursor:pointer; font-weight:800;">
-              Pdf: Hydrology Method Selection Decision Tree
+              PDF: Hydrology Method Selection Decision Tree
             </summary>
+
             <div class="panel">
-              <!-- Best: embed PDF -->
-              <div style="border:1px solid rgba(15, 23, 42, 0.10); border-radius:16px; overflow:hidden;">
+              <div style="border-radius:16px; overflow:hidden; border:1px solid rgba(15,23,42,.1);">
                 <iframe
-                  src="Hydrology-Method-Selection-Decision-Tree.pdf"
+                  src="./Hydrology-Method-Selection-Decision-Tree.pdf"
                   width="100%"
-                  height="520"
+                  height="720"
                   style="border:0;"
                   title="Hydrology Method Selection Decision Tree"
                 ></iframe>
               </div>
 
-              <p class="muted" style="font-size:13px; margin:10px 0 0;">
-                If the embed doesn’t load on some browsers, open it here:
-                <a href="Hydrology-Method-Selection-Decision-Tree.pdf" target="_blank" rel="noreferrer">
-                  View the decision tree PDF
+              <div class="media-actions">
+                <a class="btn-link" href="./Hydrology-Method-Selection-Decision-Tree.pdf" target="_blank">
+                  Open PDF full screen
                 </a>
-              </p>
+              </div>
             </div>
           </details>
+
         </div>
       </details>
       <span class="tag green">Hydrology</span>
     </div>
+
   </div>
-</section>
-  <!-- EXPERIENCE -->
+</section>  <!-- EXPERIENCE -->
   <section class="container" id="experience">
     <h2>Experience (Highlights)</h2>
     <div class="grid">
@@ -659,6 +666,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
